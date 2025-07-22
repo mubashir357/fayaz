@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KK OVERSEAS - Home</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://img.freepik.com/free-photo/flat-lay-travel-elements-arrangement_23-2148853999.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+    .header h2 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .nav a {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 30px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #004080;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    .nav a:hover {
+      background: #007bff;
+      color: white;
+    }
+    .icons {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .icons img {
+      width: 120px;
+      margin: 20px;
+    }
+
+    .video-section, .stats-section {
+      background: rgba(255, 255, 255, 0.85);
+      color: #000;
+      text-align: center;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 900px;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .stat {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Welcome to KK OVERSEAS</h2>
+  <p>Your trusted partner in global education & visa success</p>
+</div>
+
+<div class="nav">
+  <a href="/application">📄 Apply Now</a>
+  <a href="/contact">📞 Contact</a>
+  <a href="/logout">🔒 Logout</a>
+</div>
+
+<div class="icons">
+  <img src="https://cdn-icons-png.flaticon.com/512/3176/3176361.png" alt="Study Icon" title="Study Abroad">
+  <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Flight Icon" title="Flight Assistance">
+  <img src="https://cdn-icons-png.flaticon.com/512/1165/1165677.png" alt="Visa Icon" title="Visa Guidance">
+  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Passport Icon" title="Passport Help">
+</div>
+
+<div class="video-section">
+  <h3>🎥 Hear From Our Successful Students</h3>
+  <video width="100%" height="400" controls>
+    <source src="{{ url_for('static', filename='kk_success.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="stats-section">
+  <h3>📊 Our Achievements</h3>
+  <div class="stats">
+    <div class="stat">1500+ Visas Approved</div>
+    <div class="stat">50+ Partner Universities</div>
+    <div class="stat">10+ Countries Supported</div>
+    <div class="stat">98% Student Satisfaction</div>
+  </div>
+</div>
+
+<!-- 🌐 Tawk.to Live Chat Script -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/665fbb67981b6c564774d3a5/1hvrl1jr6';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+</body>
+</html>

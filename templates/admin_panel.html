@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - KK OVERSEAS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://cdn-icons-png.flaticon.com/512/3202/3202926.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .container {
+      padding: 30px;
+      background: rgba(255,255,255,0.95);
+      margin: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    h2 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #0066cc;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .back {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .back a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .back a:hover {
+      background-color: #004080;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Applications - Admin Panel</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Qualification</th>
+        <th>Score</th>
+        <th>Visa Status</th>
+      </tr>
+      {% for app in applications %}
+      <tr>
+        <td>{{ app[0] }}</td>
+        <td>{{ app[1] }}</td>
+        <td>{{ app[2] }}</td>
+        <td>{{ app[3] }}</td>
+        <td>{{ app[4] }}</td>
+        <td>{{ app[5] }}</td>
+        <td>{{ app[6] }}</td>
+        <td>{{ app[7] }}</td>
+        <td>{{ app[8] }}</td>
+        <td>{{ app[9] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <div class="back">
+      <a href="/logout">Logout</a>
+    </div>
+  </div>
+</body>
+</html>

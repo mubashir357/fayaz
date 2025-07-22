@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KK OVERSEAS - Admin Signup</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://cdn-icons-png.flaticon.com/512/1250/1250689.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    h2 {
+      text-align: center;
+      color: #cc0000;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #cc0000;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #990000;
+    }
+    .switch {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .switch a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Admin Signup</h2>
+    <form method="POST" action="/admin-signup">
+      <input type="tel" name="phone" placeholder="Admin Phone Number" required>
+      <input type="password" name="password" placeholder="Admin Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="switch">
+      Go back to <a href="/login">Login</a>
+    </div>
+  </div>
+</body>
+</html>

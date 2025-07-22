@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KK OVERSEAS - Application Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1573164574239-6c254a6b4326') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      max-width: 800px;
+      width: 95%;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #004080;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    form input:focus, form select:focus {
+      outline: none;
+      border-color: #0066cc;
+      box-shadow: 0 0 5px rgba(0,102,204,0.3);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 25px;
+      font-size: 16px;
+      background-color: #0066cc;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 20px;
+    }
+
+    .icon-row img {
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay">
+  <div class="form-container">
+    <div class="icon-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="student">
+      <img src="https://cdn-icons-png.flaticon.com/512/179/179657.png" alt="passport">
+      <img src="https://cdn-icons-png.flaticon.com/512/1785/1785278.png" alt="flight">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="visa">
+    </div>
+
+    <h2>Student Application - KK OVERSEAS</h2>
+    <form action="/application" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="dob" required>
+
+      <label for="gender">Gender</label>
+      <select name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="country">Country Applying To</label>
+      <select name="country" required>
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Germany">Germany</option>
+        <option value="Canada">Canada</option>
+        <option value="Ireland">Ireland</option>
+        <option value="Australia">Australia</option>
+      </select>
+
+      <label for="qualification">Highest Qualification</label>
+      <input type="text" name="qualification" required>
+
+      <label for="score">Test Score (IELTS/GRE/TOEFL etc)</label>
+      <input type="text" name="score" required>
+
+      <label for="visa_status">Visa Status</label>
+      <select name="visa_status" required>
+        <option value="">Select Status</option>
+        <option value="Not Applied">Not Applied</option>
+        <option value="Applied">Applied</option>
+        <option value="Approved">Approved</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
