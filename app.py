@@ -148,7 +148,7 @@ def contact():
         message = request.form['message']
         with sqlite3.connect(DB_NAME) as conn:
             c = conn.cursor()
-            c.execute("""INSERT INTO messages (name, email, message) VALUES (?, ?, ?)""", (name, email, message))
+            c.execute("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)", (name, email, message))
             conn.commit()
         return redirect(url_for('contact'))
     return render_template("contact.html")
@@ -159,6 +159,7 @@ def logout():
     session.clear()
     return redirect(url_for('login'))
 
-# ------------------ Run App ------------------
+# ------------------ Run Flask App (Render Compatible) ------------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
